@@ -1,0 +1,83 @@
+/* Define CSS variables for light mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --border-color: #ccc;
+  --link-color: #0066cc;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] {
+  --background-color: #333333;
+  --text-color: #ffffff;
+  --border-color: #555555;
+  --link-color: #66aaff;
+}
+
+/* General styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  flex: 1; /* Allow input to take up remaining space */
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px; /* Space between input and button */
+}
+
+.search-button {
+  background: none;
+  border: 1px solid var(--border-color); /* Border for button */
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 4px; /* Match border radius of input */
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.result {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 4px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.result h3 {
+  margin: 0 0 10px;
+}
+
+.result p {
+  margin: 0 0 10px;
+}
+
+.result a {
+  color: var(--link-color);
+  text-decoration: none;
+}
